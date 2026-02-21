@@ -1,6 +1,15 @@
-ubernetes Homelab (Proxmox + kubeadm)
+# 🖥️ Kubernetes Homelab (Proxmox + kubeadm)
 
 This repository contains a complete, repeatable setup for building a Kubernetes lab on Proxmox using Ubuntu 22.04, containerd, and kubeadm.
+
+---
+
+# 🗺️ Lab Diagram
+
+![Network and Rack Diagram](docs/diagrams/network_rack_diagram.png)
+
+> Physical: Router → Switch → Proxmox cluster (3× HP EliteDesk)  
+> Logical: Kubernetes VMs (kubeadm) running on Proxmox
 
 ---
 
@@ -9,8 +18,10 @@ This repository contains a complete, repeatable setup for building a Kubernetes 
 | File | Purpose |
 |------|---------|
 | [`proxmox_setup.md`](proxmox_setup.md) | Proxmox installation, networking, cloud-init template creation, and VM cloning |
-| [`runbook.md`](runbook.md) | Step‑by‑step Kubernetes cluster build (manual workflow) |
+| [`runbook.md`](runbook.md) | Step-by-step Kubernetes cluster build (manual workflow) |
 | [`k8s_prereqs_playbook.md`](k8s_prereqs_playbook.md) | Ansible automation for node preparation (containerd + kube packages) |
+| `docs/diagrams/network_rack_diagram.svg` | Editable vector diagram |
+| `docs/diagrams/network_rack_diagram.png` | PNG diagram (embedded above) |
 
 ---
 
@@ -143,7 +154,7 @@ This repo provides:
 - Kubernetes build runbook
 - Repeatable homelab architecture
 
-You now have a professional‑grade lab foundation for:
+You now have a professional-grade lab foundation for:
 
 - Kubernetes experimentation
 - GitOps workflows
@@ -153,4 +164,3 @@ You now have a professional‑grade lab foundation for:
 ---
 
 Built for homelab experimentation and learning.
-"""
